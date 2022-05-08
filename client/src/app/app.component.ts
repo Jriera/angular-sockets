@@ -8,7 +8,7 @@ import {Observable} from "rxjs";
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit,OnDestroy{
-  title = 'angular-client';
+  title = 'client';
   receivedMessage$!:Observable<string>
 
 
