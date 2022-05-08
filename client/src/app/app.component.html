@@ -1,1 +1,7 @@
-<p>App Works</p>
+<input [(ngModel)]="textMessage">
+<button (click)="sendMessage()">Send</button>
+<p>{{textMessage}}</p>
+
+<div *ngFor="let message of (messages$|async)">
+  <div>{{message}}</div>
+</div>
