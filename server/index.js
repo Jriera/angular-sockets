@@ -20,6 +20,10 @@ io.on('connection',(socket) =>{
     });
     socket.on('static message',(msg)=>{
         console.log(msg)
+    });
+    socket.on('new message',(msg)=>{
+        console.log(msg)
+        io.emit('broadcast',msg)
     })
 })
 
