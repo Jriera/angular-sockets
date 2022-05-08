@@ -9,7 +9,8 @@ import {Observable} from "rxjs";
 })
 export class AppComponent implements OnInit,OnDestroy{
   title = 'client';
-  receivedMessage$!:Observable<string>
+  textMessage!:string;
+  messages$!:Observable<string[]>
 
 
 
@@ -19,6 +20,10 @@ export class AppComponent implements OnInit,OnDestroy{
 
   ngOnInit() {
     this.chatService.setUpSocketConnection();
+  }
+
+  sendMessage(){
+    this.chatService.sendMessage(this.textMessage)
   }
 
   ngOnDestroy() {
