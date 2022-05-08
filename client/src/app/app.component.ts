@@ -1,6 +1,6 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
 import {ChatService} from "./shared/services/chat.service";
-import {Observable} from "rxjs";
+import {Observable, of} from "rxjs";
 
 @Component({
   selector: 'app-root',
@@ -20,6 +20,8 @@ export class AppComponent implements OnInit,OnDestroy{
 
   ngOnInit() {
     this.chatService.setUpSocketConnection();
+    this.messages$=of(this.chatService.messages)
+
   }
 
   sendMessage(){
