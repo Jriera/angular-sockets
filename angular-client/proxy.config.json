@@ -1,0 +1,6 @@
+{
+  "/socket.io/?EIO=4&transport=polling&t=O2VIdYU": {
+    "target": "http://localhost:3000",
+    "secure": false
+  }
+}
